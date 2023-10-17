@@ -15,6 +15,7 @@ const image = __dirname + "/../../template/1.svg";
 router.get('/', async (req, res) => {
 
     res.setHeader('Content-Type', 'image/svg+xml');
+    res.setHeader('Cache-Control', 's-maxage=1, stale-while-revalidate');
 
     const {
         error,

@@ -1,0 +1,191 @@
+<svg width="495" height="160" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <foreignObject width="495" height="160">
+        <div xmlns="http://www.w3.org/1999/xhtml" class="container">
+            <style>
+                main {
+                    display: flex;
+                    padding: 20px;
+                    border-radius: 5px;
+                }
+
+                .aside {
+                    width: 485px;
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                .light {
+                    background: #F6F8FA;
+                }
+
+                .dark {
+                    background: #161B22;
+                }
+
+                .image {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 10px;
+                }
+
+                .light-image {
+                    box-shadow: 0 0 10px 5px #f1f3f5;
+                }
+
+                .dark-image {
+                    box-shadow: 0 0 10px 5px #1b2027;
+                }
+
+                h1 {
+                    font-size: 20px;
+                    font-weight: 600;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    display: block;
+                    overflow: hidden;
+                    max-width: 260px;
+                }
+
+                .dark-h1 {
+                    color: aliceblue;
+                }
+
+                .light-h1 {
+                    color: #161B22;
+                }
+
+                p {
+                    margin-top: 5px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    display: block;
+                    overflow: hidden;
+                    max-width: 260px;
+                }
+
+                .light-p {
+                    color: rgba(22, 27, 34, calc(2/3));
+                }
+
+                .dark-p {
+                    color: rgba(240, 248, 255, calc(2/3));
+                }
+
+                .info {
+                    margin-top: 16px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+                }
+
+                .top {
+                    display: flex;
+                    align-items: center;
+                    height: 24px;
+                }
+
+                .logo {
+                    width: 24px;
+                    height: 24px;
+                    padding-right: 4px;
+                }
+
+                .flex-2 {
+                    flex: 2;
+                }
+                .bar-value {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    margin-top: 2px;
+                }
+
+                .bottom {
+                    margin-bottom: 1px;
+                    width: 80%;
+                }
+
+                #seek-obj {
+                    width: 100%;
+                    height: 5px;
+                    -webkit-appearance: none;
+                    appearance: none;
+                    border-radius: 5px;
+                    background-color: #e6e6e6;
+                    outline: none;
+                }
+
+                #seek-obj::-webkit-progress-bar {
+                    background-color: #e6e6e6;
+                    border-radius: 5px;
+                }
+
+                #seek-obj::-webkit-progress-value {
+                    background-color: #1db954;
+                    border-radius: 5px;
+                }
+
+                #seek-obj::-moz-progress-bar {
+                    background-color: #1db954;
+                    border-radius: 5px;
+                }
+
+                #seek-obj::-ms-fill {
+                    background-color: #1db954;
+                    border-radius: 5px;
+                }
+
+                .light-a {
+                    color: #161B22;
+                }
+
+                .dark-a {
+                    color: aliceblue;
+                }
+
+                .center {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .no-decoration {
+                    text-decoration: none;
+                }
+                
+            </style>
+            <a href="{{url}}" target="_blank" class="no-decoration">
+                <main class="{{theme}}">
+                    <div class="aside">
+                        <div>
+                            <img class="image {{theme}}-image" src="{{image}}" alt="image"/>
+                        </div>
+                        <section class="flex-2">
+                            <div class="info">
+                                <div class="center">
+                                    <div class="top">
+                                        <img class="logo" src="{{logo}}" alt="Spotify Logo" />
+                                        <h1 class="{{theme}}-h1">{{song}}</h1>
+                                    </div>
+                                    <p class="{{theme}}-p">{{artist}}</p>
+                                </div>
+                                <div class="bottom">
+                                    <progress id="seek-obj" value="{{progress}}" max="{{duration}}"/>
+                                    <div class="bar-value">
+                                        <a class="{{theme}}-a">{{currentTime}}</a>
+                                        <a class="{{theme}}-a">{{totalTime}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </main>
+            </a>
+        </div>
+    </foreignObject>
+</svg>
